@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💟 Friendship Day Surprise – A Cute & Emotional Website for Your Bestie
 
-## Getting Started
+A cute little surprise built with love for this Friendship Day 💛
+Sweet, simple, and made to make your bestie smile ✨
 
-First, run the development server:
+---
+
+## 🛠 Tech Stack
+
+- ⚛️ **Next.js** – React Framework for building fast UI
+- 🎨 **Tailwind CSS** – For modern and responsive styling
+- 🎞️ **Motion** – Smooth entrance and fade animations
+- 🖼️ **Canvas Confetti** – For confetti effect
+
+---
+
+## 🖥 Local Setup
+
+To run this project locally, follow these steps:
 
 ```bash
+# Clone the repository
+git clone https://github.com/Anuj579/friendship-day-site.git
+
+# Navigate into the folder
+cd friendship-day-site
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser to explore the site.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔗 Social Media
 
-## Learn More
+Follow me for more emotional surprise websites and creative dev content:
 
-To learn more about Next.js, take a look at the following resources:
+- 📷 Instagram: [@anujbuilds](https://instagram.com/anujbuilds)
+- 🎬 YouTube: [@anujbuilds](https://youtube.com/@anujbuilds)
+- 🐦 Twitter: [@anujbuilds](https://twitter.com/anujbuilds)
+- 💼 LinkedIn: [Anuj Chaudhary](https://linkedin.com/in/anujchaudhary549)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⭐ Support
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you found this project lovely, please consider giving it a ⭐ on [GitHub](https://github.com/Anuj579)  
+Thank you for being here! 🫶  
+Made with emotions by **Anuj** – _@anujbuilds_
