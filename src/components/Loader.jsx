@@ -7,7 +7,7 @@ export default function Loader() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-950/80 flex flex-col items-center justify-center relative overflow-hidden px-4">
             {/* Grid background */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
             {/* Main loader animation */}
             <div className="relative z-10 text-center">

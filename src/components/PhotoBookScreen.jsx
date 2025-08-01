@@ -55,6 +55,15 @@ export default function PhotoBookScreen({ onNext }) {
 
             <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
                 <div className="w-full max-w-4xl mx-auto">
+                    <motion.h2
+                        layout
+                        className="text-4xl md:text-5xl text-center font-bold mb-12 py-1 bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
+                        initial={{ opacity: 0, y: -30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                        Our Memory Album
+                    </motion.h2>
                     {!isBookOpen ? (
                         // Closed Book
                         <motion.div
@@ -63,14 +72,6 @@ export default function PhotoBookScreen({ onNext }) {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <motion.h2
-                                className="text-4xl md:text-5xl font-bold mb-12 py-1 bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
-                                initial={{ opacity: 0, y: -30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3, duration: 0.8 }}
-                            >
-                                Our Memory Album
-                            </motion.h2>
 
                             <motion.div
                                 className="relative mx-auto w-72 h-80 cursor-pointer"
@@ -173,10 +174,12 @@ export default function PhotoBookScreen({ onNext }) {
                                             {/* Photo frame inner shadow */}
                                             <div className="absolute inset-2 rounded-lg overflow-hidden">
                                                 <Image
-                                                    src={photos[currentPage]?.src || "/placeholder.svg"}
+                                                    src={photos[currentPage]?.src}
                                                     alt={`Memory ${currentPage + 1}`}
                                                     fill
-                                                    className="object-cover"
+                                                    sizes="256px"
+                                                    quality={90}
+                                                    className="object-cover w-full h-full"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
                                             </div>
@@ -217,43 +220,29 @@ export default function PhotoBookScreen({ onNext }) {
                                 </motion.div>
                             </div>
 
-                            {/* Photo indicators */}
-                            {/* <div className="flex justify-center gap-2 mt-8">
-                                {photos.map((_, index) => (
-                                    <motion.button
-                                        key={index}
-                                        onClick={() => setCurrentPage(index)}
-                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentPage
-                                                ? "bg-gradient-to-r from-cyan-400 to-pink-500 scale-125"
-                                                : "bg-gray-600 hover:bg-gray-500"
-                                            }`}
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.9 }}
-                                    />
-                                ))}
-                            </div> */}
-
                             {/* Continue Button */}
-                            {currentPage === photos.length - 1 && (
+                            {isBookOpen && (
                                 <motion.div
-                                    className="text-center mt-8"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5 }}
+                                    className="text-center mt-8 min-h-[60px]" // Reserve space always
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: currentPage === photos.length - 1 ? 1 : 0 }}
+                                    transition={{ duration: 0.4 }}
                                 >
                                     <motion.button
                                         onClick={onNext}
-                                        className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-bold rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                                        className={`px-8 py-3 bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-bold rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 ${currentPage !== photos.length - 1 ? "pointer-events-none opacity-0" : ""
+                                            }`}
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
-                                        <span className="flex items-center gap-3">
+                                        <span className="flex items-center gap-2">
                                             Continue to Final Message
                                             <ArrowRight className="w-5 h-5" />
                                         </span>
                                     </motion.button>
                                 </motion.div>
                             )}
+
                         </motion.div>
                     )}
                 </div>

@@ -17,7 +17,9 @@ export default function IntroScreen({ onNext }) {
     }
 
     return (
-        <div className="min-h-screen relative">
+        <motion.div
+            
+            className="min-h-screen relative">
 
             {/* Background effects */}
             <div className="absolute inset-0">
@@ -98,6 +100,6 @@ export default function IntroScreen({ onNext }) {
                     </motion.p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
