@@ -14,13 +14,14 @@ export default function FinalMessageScreen() {
   const [floatingElements, setFloatingElements] = useState([])
 
   const messages = [
-    "Hey bestie! 💕",
-    "You mean the world to me...",
-    "Through every laugh, every tear, every crazy adventure...",
-    "You've been my constant, my support, my partner in crime! 🎉",
-    "Thank you for being the most amazing friend anyone could ask for! ✨",
-    "Here's to many more years of friendship, fun, and unforgettable memories! 🥳",
-    "Happy Friendship Day, my dear friend! 💖",
+    "Hey bestie Meri jaan! 💕",
+    "Tum mere liye sab kuch ho sabse khaas...",
+    "Tumhare sath bitaya har ek pal yaadgaar rha hai...",
+    "Ik we are really far from each other but yeaa! 🎉",
+    "N mujeh koi mujhe tum jaisa mila n hi koi mujhe chyie you are amazing! ✨",
+    "Ab tumhare baare mai jitna bolu utna kam explain krna muskil hai! 🥳",
+    "I LOVE YOU SO MUCH! 💖 and really sorry for my fault",
+    "Happy Friendship Day, Bas kush rha karo! 💖",
   ]
 
   const titleWords = ["HAPPY", "FRIENDSHIP", "DAY!"]

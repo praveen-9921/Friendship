@@ -62,7 +62,7 @@ export default function PhotoBookScreen({ onNext }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
                     >
-                        Our Memory Album
+                        Your Cute Pic
                     </motion.h2>
                     {!isBookOpen ? (
                         // Closed Book
@@ -130,7 +130,7 @@ export default function PhotoBookScreen({ onNext }) {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 1, duration: 0.8 }}
                             >
-                                Tap the book to explore our beautiful memories
+                                Tap the book to explore beautiful memories
                             </motion.p>
                         </motion.div>
                     ) : (
